@@ -1,6 +1,6 @@
 {
   "name": "@assemblylanguage/source-code-minifier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Minifies source code in HTML documents.",
   "author": "assemblylanguage",
   "license": "AGPLv3",

@@ -11,6 +11,7 @@ import {
   minifyCss,
   minifyJs,
   minifyGenericTagNames,
+  collapseEmptyAttributes,
 } from './index';
 
 /**
@@ -64,4 +65,17 @@ export async function minifyGenericTagNamesPlugin(
   humble: any,
 ) : Promise<void> {
   await minifyGenericTagNames(humble.document);
+}
+
+/**
+ * A plugin wrapper for the `collapseEmptyAttributes` function.
+ *
+ * @param humble a Humble object that will be modified in place.
+ */
+export async function collapseEmptyAttributesPlugin(
+  humble: any,
+) : Promise<void> {
+  await collapseEmptyAttributes(
+    humble.document.documentElement.outerHTML,
+  );
 }

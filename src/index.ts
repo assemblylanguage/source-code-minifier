@@ -10,6 +10,7 @@ import {
   minifyCss,
   minifyJs,
   minifyGenericTagNames,
+  collapseEmptyAttributes,
 } from './lib/index';
 
 import {
@@ -17,6 +18,7 @@ import {
   minifyCssPlugin,
   minifyJsPlugin,
   minifyGenericTagNamesPlugin,
+  collapseEmptyAttributesPlugin,
 } from './lib/plugin';
 
 export {
@@ -24,6 +26,7 @@ export {
   minifyCss,
   minifyJs,
   minifyGenericTagNames,
+  collapseEmptyAttributes,
 };
 
 export const plugins = {
@@ -31,4 +34,5 @@ export const plugins = {
   minifyCssPlugin,
   minifyJsPlugin,
   minifyGenericTagNamesPlugin,
+  collapseEmptyAttributesPlugin,
 };
