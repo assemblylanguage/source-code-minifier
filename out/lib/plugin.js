@@ -12,7 +12,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.minifyGenericTagNamesPlugin = exports.minifyJsPlugin = exports.minifyCssPlugin = exports.minifyHtmlPlugin = void 0;
+exports.collapseEmptyAttributesPlugin = exports.minifyGenericTagNamesPlugin = exports.minifyJsPlugin = exports.minifyCssPlugin = exports.minifyHtmlPlugin = void 0;
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/extensions */
 /* eslint-disable no-param-reassign */
@@ -61,4 +61,15 @@ function minifyGenericTagNamesPlugin(humble) {
     });
 }
 exports.minifyGenericTagNamesPlugin = minifyGenericTagNamesPlugin;
+/**
+ * A plugin wrapper for the `collapseEmptyAttributes` function.
+ *
+ * @param humble a Humble object that will be modified in place.
+ */
+function collapseEmptyAttributesPlugin(humble) {
+    return __awaiter(this, void 0, void 0, function* () {
+        yield index_1.collapseEmptyAttributes(humble.document.documentElement.outerHTML);
+    });
+}
+exports.collapseEmptyAttributesPlugin = collapseEmptyAttributesPlugin;
 //# sourceMappingURL=plugin.js.map
